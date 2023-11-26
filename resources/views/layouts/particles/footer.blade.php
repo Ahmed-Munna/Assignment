@@ -2,10 +2,10 @@
         <div class="content-inner">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                    <p>&copy; Copyright. All Rights Reserved</p>
                 </div>
                 <div class="col-md-6">
-                    <p>Powered by <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p>Powered by munna</p>
                 </div>
             </div>
         </div>

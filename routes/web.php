@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\projectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +13,22 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// home page
 Route::get('/', function () {
     return view('pages.home');
-});
+})->name('home');
+
+// about page
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
+// projects pages
+
+Route::get('/projects', [projectsController::class, 'index'])->name('projects');
+
+// contuct page
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
 

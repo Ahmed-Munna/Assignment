@@ -1,11 +1,13 @@
-<div class="about" id="about">
+@extends('layouts.app')
+@section('content')
+                <div class="about" id="about">
                     <div class="content-inner">
                         <div class="content-header">
                             <h2>About Me</h2>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-md-6 col-lg-5">
-                                <img src="img/about.jpg" alt="Image">
+                                <img src="{{ asset('assets/img/about.jpg') }}" alt="Image">
                             </div>
                             <div class="col-md-6 col-lg-7">
                                 <p>
@@ -50,3 +52,4 @@
                         </div>
                     </div>
                 </div>
+@endsection

@@ -1,4 +1,6 @@
-<div class="contact" id="contact">
+@extends('layouts.app')
+@section('content')
+   <div class="contact" id="contact">
                     <div class="content-inner">
                         <div class="content-header">
                             <h2>Contact</h2>
@@ -44,3 +46,4 @@
                         </div>
                     </div>
                 </div>
+@endsection
