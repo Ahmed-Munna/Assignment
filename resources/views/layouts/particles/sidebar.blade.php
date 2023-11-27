@@ -27,8 +27,8 @@
                     </nav>
                 </div>
                 <div class="sidebar-footer">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://twitter.com/AhmedMunna_"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmed-munna-360112200/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>

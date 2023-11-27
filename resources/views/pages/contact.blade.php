@@ -14,11 +14,9 @@
                                     <p><i class="fa fa-phone"></i><a href="tel:+1234567890">+123-456-7890</a></p>
                                     <p><i class="fa fa-map-marker"></i>123 Street, Los Angeles, CA, USA</p>
                                     <div class="social">
-                                        <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn" href="https://twitter.com/AhmedMunna_"><i class="fab fa-twitter"></i></a>
                                         <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn" href=""><i class="fab fa-youtube"></i></a>
+                                        <a class="btn" href="https://www.linkedin.com/in/ahmed-munna-360112200/"><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
