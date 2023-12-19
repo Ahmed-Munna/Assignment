@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SaleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,8 +14,16 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+ */
 
-Route::get('/', function () {
-    return view('storekeeper.home');
-});
+Route::get('/', [DashboardController::class, 'showHome'])->name('home');
+
+Route::get('/add_product', [ProductController::class, 'addProduct'])->name('add.product');
+Route::post('/add_product', [ProductController::class, 'storeProduct'])->name('store.product');
+Route::get('/update_price', [ProductController::class, 'updatePrice'])->name('update.price');
+Route::get('/all_sale', [SaleController::class, 'showSale'])->name('all.sale');
+
+Route::get('/sale', [SaleController::class, 'viewSaleProduct'])->name('add.sale');
+Route::post('/sale-products', [SaleController::class, 'saleProduct'])->name('sale.product');
+
+Route::post('/sale-product/update-price', [ProductController::class, 'updateProductPrice'])->name('sale.product.updatePrice');
