@@ -1,8 +1,6 @@
 <?php
-
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\SaleController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,16 +12,26 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
- */
+*/
 
-Route::get('/', [DashboardController::class, 'showHome'])->name('home');
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/', [HomeController::class, 'showDropdown'])->name('index');
+Route::post('/bus-view', [HomeController::class, 'busView'])->name('bus_view');
+Route::post('/buy_now', [HomeController::class, 'processPurchase'])->name('buy_now');
+Route::post('/dashboard', [HomeController::class, 'processPurchase_Final'])->name('checkoutFinal');
+//Show Notice 
+Route::get('/bus-view', function () {
+    return view('notice');
+})->name('bus_view_Notice');
 
-Route::get('/add_product', [ProductController::class, 'addProduct'])->name('add.product');
-Route::post('/add_product', [ProductController::class, 'storeProduct'])->name('store.product');
-Route::get('/update_price', [ProductController::class, 'updatePrice'])->name('update.price');
-Route::get('/all_sale', [SaleController::class, 'showSale'])->name('all.sale');
+Route::get('/dashboard',[HomeController::class, 'user_type_check'])->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/sale', [SaleController::class, 'viewSaleProduct'])->name('add.sale');
-Route::post('/sale-products', [SaleController::class, 'saleProduct'])->name('sale.product');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::post('/sale-product/update-price', [ProductController::class, 'updateProductPrice'])->name('sale.product.updatePrice');
+require __DIR__.'/auth.php';
